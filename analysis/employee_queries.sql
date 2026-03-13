@@ -1,3 +1,3 @@
---Watch the table 
+--The detailes of the employees in table formate
 select*from emp;
 
