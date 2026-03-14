@@ -23,5 +23,10 @@ SELECT ENAME,SAL
 FROM EMP
 ORDER BY SAL DESC;
 
+------------------------------------
+--DEPARTMENT ANALYSIS
+-----------------------------------
+
+--Show employees along with their department names
 
 
