@@ -1,3 +1,11 @@
---The detailes of the employees in table formate
-select*from emp;
+-------------------------------------------------
+--BASIC DATA VIEW
+-------------------------------------------------
 
+-- VIEW ALL EMPLOYEES
+SELECT * 
+FROM EMP;
+
+--VIEW ALL DEPARTMENTS
+SELECT *
+FROM DEPT;
