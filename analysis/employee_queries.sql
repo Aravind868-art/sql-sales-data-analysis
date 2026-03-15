@@ -29,4 +29,24 @@ ORDER BY SAL DESC;
 
 --Show employees along with their department names
 
+SELECT e.ename,d.dname
+FROM emp e
+INNER JOIN dept d 
+ON e.deptno = d.deptno;
+
+--Count how many employees are in each department.
+
+SELECT d.dname, COUNT(*) AS employee_count
+FROM emp e 
+INNER JOIN dept d
+ON e.deptno = d.deptno
+GROUP BY d.dname;
+
+--Show departments that currently have no employees.
+
+
+
+
+
+
 
