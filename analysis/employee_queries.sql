@@ -43,6 +43,21 @@ ON e.deptno = d.deptno
 GROUP BY d.dname;
 
 --Show departments that currently have no employees.
+--Using with left join :
+SELECT d.dname 
+FROM dept d
+LEFT JOIN emp e
+ON d.deptno = e.deptno
+WHERE e.empno IS NULL;
+--Uding with Not Exists
+SELECT d.dname 
+FROM dept d
+WHERE  NOT EXISTS(
+  SELECT 1
+  FROM emp e
+  WHERE e.deptno = d.deptno
+);
+
 
 
 
