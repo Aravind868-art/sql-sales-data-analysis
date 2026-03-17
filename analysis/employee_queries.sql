@@ -43,6 +43,7 @@ ON e.deptno = d.deptno
 GROUP BY d.dname;
 
 --Show departments that currently have no employees.
+
 --Using with left join :
 SELECT d.dname 
 FROM dept d
@@ -57,6 +58,8 @@ WHERE  NOT EXISTS(
   FROM emp e
   WHERE e.deptno = d.deptno
 );
+
+--Find the department with the highest number of employees.
 
 
 
