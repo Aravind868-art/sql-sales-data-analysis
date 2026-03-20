@@ -61,6 +61,29 @@ WHERE  NOT EXISTS(
 
 --Find the department with the highest number of employees.
 
+SELECT d.dname , COUNT(*) AS emp_count
+FROM emp e 
+JOIN dept d
+ON e.deptno = d.deptno
+GROUP BY d.dname
+ORDER BY emp_count DESC
+FETCH FIRST 1 ROW ONLY ;
+
+--Show total salary paid in each department.
+
+SELECT d.dname, NVL(SUM(e.sal),0) AS salary_paid
+FROM dept d
+LEFT JOIN  emp e 
+ON d.deptno=e.deptno
+GROUP BY d.dname;
+
+------------------------------
+--SALARY ANALYSIS
+------------------------------
+
+--Find the employee with the highest salary.
+
+
 
 
 
